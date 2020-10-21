@@ -94,5 +94,26 @@ namespace DataStructureDemo
             }
         }
 
+        internal void DeleteEnd()
+        {
+            if (head == null)
+                Console.WriteLine("Nothing is there to be deleted");
+            else if(head.next==null)
+            {
+                Console.WriteLine(head.data + " has been deleted");
+                head = null;
+            }
+            else
+            {
+                Node temp = head;
+                while(temp.next.next!=null)
+                {
+                    temp = temp.next;
+                }
+                Console.WriteLine(temp.next.data + " has been deleted");
+                temp.next = null;
+            }
+        }
+
     }
 }
