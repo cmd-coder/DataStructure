@@ -15,6 +15,9 @@ namespace DataStructureDemo
             Console.WriteLine("Initial Linked List");
             list.Display();
             list.Search(30);
+
+            list.InsertAfter(40, 30);
+            list.Display();
         }
     }
 }
