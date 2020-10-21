@@ -31,5 +31,19 @@ namespace UnitTestProject1
             bool flagReturned = list.InsertAfter(data, previousNode);
             Assert.AreEqual(flag, flagReturned);
         }
+
+        [TestMethod]
+        [DataRow(40, true)]
+        [DataRow(45, false)]
+        public void DeleteAny_PassAValueToBeDeleted_ReturnTrueOrFalse(int data, bool flag)
+        {
+            LinkedList list = new LinkedList();
+            list.Add(56);
+            list.Add(30);
+            list.Add(40);
+            list.Add(70);
+            bool flagReturned = list.DeleteAny(data);
+            Assert.AreEqual(flag, flagReturned);
+        }
     }
 }
