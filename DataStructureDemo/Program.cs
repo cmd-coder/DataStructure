@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.FileIO;
+using System;
 
 namespace DataStructureDemo
 {
@@ -11,6 +12,10 @@ namespace DataStructureDemo
             list.Add(56);
             list.Add(70);
             list.InsertAtParticularPosition(2, 30);
+            Console.WriteLine("Initial Linked List");
+            list.Display();
+            list.Delete();
+            Console.WriteLine("After removing head");
             list.Display();
         }
     }
