@@ -14,9 +14,7 @@ namespace DataStructureDemo
             list.InsertAtParticularPosition(2, 30);
             Console.WriteLine("Initial Linked List");
             list.Display();
-            list.DeleteEnd();
-            Console.WriteLine("After removing end node");
-            list.Display();
+            list.Search(30);
         }
     }
 }

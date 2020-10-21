@@ -115,5 +115,28 @@ namespace DataStructureDemo
             }
         }
 
+        internal void Search(int input)
+        {
+            if (head == null)
+                Console.WriteLine("List is Empty");
+            else
+            {
+                Node temp = head;
+                bool flag = false;
+                while(temp!=null)
+                {
+                    if (temp.data == input)
+                    {
+                        Console.WriteLine("The element is present");
+                        flag = true;
+                        break;
+                    }
+                    temp = temp.next;
+                }
+                if (!flag)
+                    Console.WriteLine("The Element is Absent");
+            }
+        }
+
     }
 }
