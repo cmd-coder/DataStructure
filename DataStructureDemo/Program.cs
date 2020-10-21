@@ -8,9 +8,9 @@ namespace DataStructureDemo
         {
             Console.WriteLine("Welcome to linked list program");
             LinkedList list = new LinkedList();
-            list.Add(56);
-            list.Add(30);
-            list.Add(70);
+            list.AddInBeginning(70);
+            list.AddInBeginning(30);
+            list.AddInBeginning(56);
             list.Display();
         }
     }

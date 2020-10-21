@@ -24,6 +24,20 @@ namespace DataStructureDemo
             Console.WriteLine("{0} inserted into the linked list", node.data);
         }
 
+        internal void AddInBeginning(int data)
+        {
+            Node node = new Node(data);
+            if (head == null)
+                head = node;
+            else
+            {
+                Node temp = head;
+                head = node;
+                node.next = temp;
+            }
+            Console.WriteLine("{0} inserted into the linked list", node.data);
+        }
+
         internal void Display()
         {
             Node temp = this.head;
@@ -32,11 +46,12 @@ namespace DataStructureDemo
                 Console.WriteLine("Linked list is empty");
                 return;
             }
-            while(temp!=null)
+            while(temp.next!=null)
             {
-                Console.WriteLine(temp.data + " ");
+                Console.Write(temp.data + "->");
                 temp = temp.next;
             }
+            Console.WriteLine(temp.data);
         }
 
         
