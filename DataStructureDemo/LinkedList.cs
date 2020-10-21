@@ -4,10 +4,10 @@ using System.Text;
 
 namespace DataStructureDemo
 {
-    class LinkedList
+    public class LinkedList
     {
         internal Node head;
-        internal void Add(int data)
+        public void Add(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -115,14 +115,14 @@ namespace DataStructureDemo
             }
         }
 
-        internal void Search(int input)
+        public bool Search(int input)
         {
+            bool flag = false;
             if (head == null)
                 Console.WriteLine("List is Empty");
             else
             {
                 Node temp = head;
-                bool flag = false;
                 while(temp!=null)
                 {
                     if (temp.data == input)
@@ -136,6 +136,7 @@ namespace DataStructureDemo
                 if (!flag)
                     Console.WriteLine("The Element is Absent");
             }
+            return flag;
         }
 
     }
