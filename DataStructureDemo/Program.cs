@@ -14,8 +14,8 @@ namespace DataStructureDemo
             list.InsertAtParticularPosition(2, 30);
             Console.WriteLine("Initial Linked List");
             list.Display();
-            list.Search(30);
 
+            Console.WriteLine("Inserting 40 after 30");
             list.InsertAfter(40, 30);
             list.Display();
         }
